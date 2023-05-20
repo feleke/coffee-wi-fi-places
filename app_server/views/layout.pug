@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    style 
+        include ./assets/css/bootstrap.min.css
+        include ./assets/css/all.min.css
+        //- include ./assets/css/custom.css
+        include ./assets/css/style.css
+    script
+        include ./assets/js/jquery.min.js
+        include ./assets/js/popper.min.js
+        include ./assets/js/tooltip.min.js
+        include ./assets/js/bootstrap.min.js 
+        //- include ./assets/js/custom.js
+  body
+    nav.navbar.fixed-top.navbar-expand-md.navbar-light
+      .container
+        a.navbar-brand(href='/') Coffee-con-Wifi
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/about/') About
+
+    .container.content
+
+
+      block content
+
+
+      footer
+        .row
+          .col-12
+            small &copy; coffee-con-Wifi - Felix tech 2023
+    
